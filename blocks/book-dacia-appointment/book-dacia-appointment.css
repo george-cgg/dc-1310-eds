@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .book-dacia-appointment {
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+main .book-dacia-appointment h1,
+main .book-dacia-appointment h2,
+main .book-dacia-appointment h3,
+main .book-dacia-appointment .bda-title {
+  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .book-dacia-appointment .bda-card {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/* Header — darkened brand palette background */
+main .book-dacia-appointment .bda-header {
+  padding: 14px 16px;
+}
+
+main .book-dacia-appointment .bda-title {
+  margin: 0 !important;
+  font-size: 20px !important;
+  font-weight: 700;
+  line-height: 1.15 !important;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+main .book-dacia-appointment .bda-subtitle {
+  margin: 6px 0 0 !important;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+  opacity: 0.78;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Status chips */
+main .book-dacia-appointment .bda-chip {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+main .book-dacia-appointment .bda-chip-ok {
+  background: #2dca72;
+  color: #06331b;
+}
+main .book-dacia-appointment .bda-chip-pending {
+  background: #e0a12e;
+  color: #3a2600;
+}
+
+/* Form */
+main .book-dacia-appointment .bda-form {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+main .book-dacia-appointment .bda-dynamic {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+main .book-dacia-appointment .bda-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .book-dacia-appointment .bda-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.5;
+}
+
+main .book-dacia-appointment .bda-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 10px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 14px;
+  background: #fff;
+  color: #000;
+}
+
+main .book-dacia-appointment .bda-input:focus {
+  outline: 2px solid #646b52;
+  outline-offset: 0;
+  border-color: #646b52;
+}
+
+/* Buttons */
+main .book-dacia-appointment .bda-cta {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+main .book-dacia-appointment .bda-cta-primary {
+  border: 1px solid #646b52;
+  background: #646b52;
+  color: #fff;
+}
+main .book-dacia-appointment .bda-cta-primary:hover,
+main .book-dacia-appointment .bda-cta-primary:focus-visible {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+main .book-dacia-appointment .bda-cta-ghost {
+  border: 1px solid #cfd1d3;
+  background: #fff;
+  color: #000;
+}
+main .book-dacia-appointment .bda-cta-ghost:hover,
+main .book-dacia-appointment .bda-cta-ghost:focus-visible {
+  background: #f2f2f2;
+}
+
+/* Confirmation body */
+main .book-dacia-appointment .bda-conf-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .book-dacia-appointment .bda-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.45;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 6px;
+}
+
+main .book-dacia-appointment .bda-row-k {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  opacity: 0.55;
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+main .book-dacia-appointment .bda-row-v {
+  text-align: right;
+  color: #000;
+}
+
+main .book-dacia-appointment .bda-steps {
+  margin-top: 4px;
+}
+
+main .book-dacia-appointment .bda-steps-title {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.55;
+  margin-bottom: 4px;
+}
+
+main .book-dacia-appointment .bda-steps-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+main .book-dacia-appointment .bda-steps-list li {
+  margin-bottom: 3px;
+}
+
+main .book-dacia-appointment .bda-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Dark mode — dim outer background; keep palette header intact */
+@media (prefers-color-scheme: dark) {
+  main .book-dacia-appointment .bda-card {
+    background: #161616;
+    border-color: #444;
+  }
+  main .book-dacia-appointment .bda-input {
+    background: #1e1e1e;
+    color: #f2f2f2;
+    border-color: #555;
+  }
+  main .book-dacia-appointment .bda-row { border-bottom-color: #333; }
+  main .book-dacia-appointment .bda-row-v { color: #f2f2f2; }
+  main .book-dacia-appointment .bda-label,
+  main .book-dacia-appointment .bda-row-k,
+  main .book-dacia-appointment .bda-steps-title { color: #cfd1c8; opacity: 0.85; }
+  main .book-dacia-appointment .bda-steps-list { color: #f2f2f2; }
+  main .book-dacia-appointment .bda-cta-ghost {
+    background: #1e1e1e;
+    color: #f2f2f2;
+    border-color: #555;
+  }
+  main .book-dacia-appointment .bda-cta-ghost:hover,
+  main .book-dacia-appointment .bda-cta-ghost:focus-visible { background: #2a2a2a; }
+}
+body.dark main .book-dacia-appointment .bda-card {
+  background: #161616;
+  border-color: #444;
+}
+body.dark main .book-dacia-appointment .bda-input {
+  background: #1e1e1e;
+  color: #f2f2f2;
+  border-color: #555;
+}
+body.dark main .book-dacia-appointment .bda-row { border-bottom-color: #333; }
+body.dark main .book-dacia-appointment .bda-row-v { color: #f2f2f2; }
+body.dark main .book-dacia-appointment .bda-label,
+body.dark main .book-dacia-appointment .bda-row-k,
+body.dark main .book-dacia-appointment .bda-steps-title { color: #cfd1c8; opacity: 0.85; }
+body.dark main .book-dacia-appointment .bda-steps-list { color: #f2f2f2; }
+body.dark main .book-dacia-appointment .bda-cta-ghost {
+  background: #1e1e1e;
+  color: #f2f2f2;
+  border-color: #555;
+}
+body.dark main .book-dacia-appointment .bda-cta-ghost:hover,
+body.dark main .book-dacia-appointment .bda-cta-ghost:focus-visible { background: #2a2a2a; }
