@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .compare-dacia-models {
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+main .compare-dacia-models h1,
+main .compare-dacia-models h2,
+main .compare-dacia-models h3,
+main .compare-dacia-models [class*="title"],
+main .compare-dacia-models [class*="name"] {
+  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .compare-dacia-models-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  /* Single source of truth for the label column width/gap, reused by the header
+     banner and both CTA rows so the model-A / model-B boundary lines up across
+     every row. */
+  --label-col: 96px;
+  --label-gap: 10px;
+}
+
+main .compare-dacia-models-header-row {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  padding: 0 12px;
+}
+
+main .compare-dacia-models-row-spacer {
+  flex: 0 0 var(--label-col);
+}
+
+main .compare-dacia-models-header-row .compare-dacia-models-row-spacer {
+  /* header-row's own gap is a 2px cosmetic hairline, not a real column gap —
+     fold it in so the spacer's total footprint still equals label-col + label-gap. */
+  flex-basis: calc(var(--label-col) + var(--label-gap) - 2px);
+}
+
+main .compare-dacia-models-header-panel {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main .compare-dacia-models-header-image {
+  flex: 0 0 140px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+main .compare-dacia-models-header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main .compare-dacia-models-header-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #3a3d30;
+}
+
+main .compare-dacia-models-header-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  gap: 6px;
+  background: #3a3d30;
+  color: #fff;
+  overflow: hidden;
+}
+
+main .compare-dacia-models-header-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .compare-dacia-models-header-desc {
+  font-size: 13px;
+  line-height: 1.45;
+  opacity: 0.78;
+  margin: 0;
+}
+
+main .compare-dacia-models-table {
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+main .compare-dacia-models-table-row {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  gap: 10px;
+  border-top: 1px solid rgba(128, 128, 128, 0.15);
+}
+
+main .compare-dacia-models-table-row:nth-child(even) {
+  background: rgba(128, 128, 128, 0.14);
+}
+
+main .compare-dacia-models-table-label {
+  flex: 0 0 var(--label-col);
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+main .compare-dacia-models-table-value {
+  /* flex-basis 0 (not auto) so both value columns split remaining space evenly
+     regardless of that row's own text length. */
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: break-word;
+  white-space: normal;
+  box-sizing: border-box;
+  border-left: 2px solid transparent;
+  padding-left: 6px;
+}
+
+main .compare-dacia-models-table-value-diff {
+  font-weight: 700;
+  border-left-color: #646b52;
+}
+
+main .compare-dacia-models-table-row-lead .compare-dacia-models-table-value {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+main .compare-dacia-models-table-row-lead .compare-dacia-models-table-label {
+  opacity: 0.85;
+}
+
+main .compare-dacia-models-cta-row {
+  padding: 10px 12px;
+  gap: var(--label-gap);
+}
+
+main .compare-dacia-models-table-cta {
+  flex: 1 1 auto;
+  padding: 10px;
+  background: #646b52;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: background-color 0.15s ease;
+}
+
+main .compare-dacia-models-table-cta:hover,
+main .compare-dacia-models-table-cta:focus-visible {
+  background: #000000;
+}
+
+main .compare-dacia-models-shared-cta {
+  background: #3860be;
+}
+
+main .compare-dacia-models-shared-cta:hover,
+main .compare-dacia-models-shared-cta:focus-visible {
+  background: #29489a;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .compare-dacia-models-header-image { background: #1e1e1e; }
+  main .compare-dacia-models-card { background: #1a1a1a; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
+  main .compare-dacia-models-table-row { border-top-color: rgba(255, 255, 255, 0.12); color: #f0f0f0; }
+  main .compare-dacia-models-table-row:nth-child(even) { background: rgba(255, 255, 255, 0.06); }
+  main .compare-dacia-models-table-label { opacity: 0.7; }
+}
+body.dark main .compare-dacia-models-header-image { background: #1e1e1e; }
+body.dark main .compare-dacia-models-card { background: #1a1a1a; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
+body.dark main .compare-dacia-models-table-row { border-top-color: rgba(255, 255, 255, 0.12); color: #f0f0f0; }
+body.dark main .compare-dacia-models-table-row:nth-child(even) { background: rgba(255, 255, 255, 0.06); }
+body.dark main .compare-dacia-models-table-label { opacity: 0.7; }
