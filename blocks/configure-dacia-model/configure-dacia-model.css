@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap');
+
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .configure-dacia-model {
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+main .configure-dacia-model h1,
+main .configure-dacia-model h2,
+main .configure-dacia-model h3,
+main .configure-dacia-model [class*="title"] {
+  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .configure-dacia-model-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 340px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+main .configure-dacia-model-image-panel {
+  flex: 0 0 260px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+main .configure-dacia-model-image-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main .configure-dacia-model-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+  gap: 8px;
+  background: #5d644d;
+  color: #fff;
+  overflow: hidden;
+}
+
+main .configure-dacia-model-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+main .configure-dacia-model-version {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.85;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+main .configure-dacia-model-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 2px 0;
+}
+
+main .configure-dacia-model-chip {
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 4px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+main .configure-dacia-model-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+  min-height: 0;
+  flex: 1;
+}
+
+main .configure-dacia-model-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+main .configure-dacia-model-section summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .configure-dacia-model-section summary::-webkit-details-marker {
+  display: none;
+}
+
+main .configure-dacia-model-section summary::after {
+  content: '+';
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+main .configure-dacia-model-section[open] summary::after {
+  content: '\2013';
+}
+
+main .configure-dacia-model-section ul {
+  margin: 0 0 8px;
+  padding: 0 0 0 16px;
+  font-size: 12px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+main .configure-dacia-model-eco {
+  font-size: 11px;
+  opacity: 0.75;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+main .configure-dacia-model-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+main .configure-dacia-model-price {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+main .configure-dacia-model-price-note {
+  font-size: 10px;
+  opacity: 0.7;
+  line-height: 1.3;
+}
+
+main .configure-dacia-model-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+main .configure-dacia-model-cta {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+main .configure-dacia-model-cta.primary {
+  background: #646b52;
+  color: #ffffff;
+}
+
+main .configure-dacia-model-cta.primary:hover,
+main .configure-dacia-model-cta.primary:focus-visible {
+  background: #000000;
+}
+
+main .configure-dacia-model-cta.secondary {
+  background: rgba(0, 0, 0, 0.32);
+  color: #ffffff;
+}
+
+main .configure-dacia-model-cta.secondary:hover,
+main .configure-dacia-model-cta.secondary:focus-visible {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+main .configure-dacia-model-empty {
+  padding: 24px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-color, #333);
+}
+
+@media (prefers-color-scheme: dark) {
+  main .configure-dacia-model-image-panel { background: #1e1e1e; }
+  main .configure-dacia-model-card { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
+}
+body.dark main .configure-dacia-model-image-panel { background: #1e1e1e; }
+body.dark main .configure-dacia-model-card { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
+
+@media (max-width: 560px) {
+  main .configure-dacia-model-card { flex-direction: column; }
+  main .configure-dacia-model-image-panel { flex: 0 0 160px; }
+}
